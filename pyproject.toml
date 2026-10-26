@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vlm-usage-monitor"
+version = "0.1.0"
+description = "Per-call token usage and USD cost tracking for Claude, OpenAI, Gemini and local (vLLM) VLM calls."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Ziyi Chu"}]
+dependencies = []  # stdlib only; openai / anthropic are used if you have them
+
+[project.urls]
+Homepage = "https://github.com/RobertCHU01/VLM-Usage-Monitor"
+
+[project.optional-dependencies]
+test = ["pytest", "openai", "anthropic"]
+
+[project.scripts]
+vlm-usage = "vlm_usage_monitor.cli:main"
+
+[tool.setuptools]
+packages = ["vlm_usage_monitor"]
+
+[tool.setuptools.package-data]
+vlm_usage_monitor = ["data/*.json"]

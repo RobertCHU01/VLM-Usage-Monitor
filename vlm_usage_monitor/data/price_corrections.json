@@ -1,0 +1,8 @@
+{
+  "_about": "Fixes applied on top of the LiteLLM table where it disagrees with the provider's published price. USD per token. Checked 2026-10-26.",
+  "claude-sonnet-5-5": {
+    "_why": "Anthropic lists Claude Sonnet 5.5 cache reads at $0.20/MTok (0.1x input); LiteLLM has $0.10.",
+    "cache_read_input_token_cost": 2e-07,
+    "cache_read_input_token_cost_batches": 1e-07
+  }
+}
